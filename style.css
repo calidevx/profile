@@ -1,0 +1,161 @@
+*, 
+::after,
+::before{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth;
+    /* background-color: #0a0a0a; */
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+html{
+    font-size: 16px;
+}
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+nav{
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    background-color: transparent;
+    transition: .4s;
+    padding: .8rem 0;
+}
+.main-nav{
+    max-width: 1070px;
+    margin: 0 auto;
+    padding: 0 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo{
+    display: flex;
+    margin-left: 10%;
+    font-size: 1.9rem;
+    color: white;
+    font-weight: 800;
+}
+.logo span{
+    color: #4f20e8;
+}
+.navbar{
+    display: flex;
+}
+.menu-item{
+    padding: 0 5px;
+    transition: .4s;
+}
+/* hover nav-item */
+.menu-item a{
+    transition: .3s;
+}
+.menu-item a:hover{
+    color: #4f20e8;
+}
+.menu-link{
+    color: white;
+    font-size: 1.2rem;
+    padding: 0 0.5rem;
+    font-weight: 300;
+}
+.content{
+    height: 100vh;
+    background-color: #0a0a0a;
+    color: white;
+}
+.content:nth-child(odd){
+    background-color: #141414;
+}
+#home,
+#about,
+#skills,
+#contact{
+    padding: 70px 30px;
+}
+
+/* Sticky Navbar */
+nav.header-sticky{
+    position: fixed;
+    background-color: rgba(255, 255, 255, .1);
+    backdrop-filter: blur(10px);
+    z-index: 2000;
+    transition: .4s;
+}
+
+/* Hide Navbar */
+@media(max-width: 600px){
+    .navbar{
+        display: none;
+    }
+}
+
+/* home section*/
+#home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.home-item h1{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 4.375rem;
+}
+
+.home-item h2{
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+.home-item h2 .auto-typed{
+    color:#4f20e8;
+}
+
+.home-item .infoHome{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    max-width: 600px;   
+    margin: 0 auto;     
+    padding: 0 1rem;
+}
+.iconHome{
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    font-size: 2.6em;
+    padding: 2rem 0;
+}
+.socialicon{
+    display: inline-flex;
+    margin: 0 .5rem;
+    padding: 8px;
+    border: 2px solid #4f20e8;
+    border-radius: 50%;
+    color: #4f20e8;
+    transition: .5s;
+}
+.socialicon:hover{
+    background-color: #4f20e8;
+    color: #141414;
+    box-shadow: 0 0 10px #4f20e8;
+}
+@media(max-width: 600px){
+    html{
+        font-size: 12px;
+    }
+    .home-item h1{
+        font-size: 3.6rem;
+    }
+}
