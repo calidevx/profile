@@ -129,7 +129,7 @@ nav.header-sticky{
     text-align: center;
     justify-content: center;
     align-items: center;
-    font-size: 4.375rem;
+    font-size: clamp(2.5rem, 6vw, 4.375rem);
 }
 
 .home-item h2{
@@ -176,7 +176,10 @@ nav.header-sticky{
         font-size: 12px;
     }
     .home-item h1{
-        font-size: 3.6rem;
+        font-size: 2.6rem;
+    }
+    .home-item h2{
+        font-size: 1.6rem;
     }
 }
 
