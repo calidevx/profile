@@ -67,19 +67,39 @@ nav{
     font-weight: 300;
 }
 .content{
-    height: 100vh;
+    /* height: 100vh; */
     background-color: #0a0a0a;
     color: white;
 }
-.content:nth-child(odd){
+/* .content:nth-child(odd){
     background-color: #141414;
+} */
+@media(max-width: 600px){
+    #home,
+    #about,
+    #skills,
+    #contact{
+        padding: 4rem 1rem;
+    }
 }
-#home,
-#about,
-#skills,
-#contact{
-    padding: 70px 30px;
+
+@media(min-width: 601px){
+    #home,
+    #about,
+    #skills,
+    #contact{
+        padding: 4rem 14rem;
+    }
 }
+@media(max-width: 1200px){
+    #home,
+    #about,
+    #skills,
+    #contact{
+        padding: 4rem 3rem;
+    }
+}
+
 
 /* Sticky Navbar */
 nav.header-sticky{
@@ -158,4 +178,16 @@ nav.header-sticky{
     .home-item h1{
         font-size: 3.6rem;
     }
+}
+
+/* About me */
+
+.about-item h1{
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+.about-item p{
+    margin: 1.6rem auto;
+    text-align: justify;
+    text-justify: inter-word;
 }
