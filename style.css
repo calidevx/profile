@@ -173,11 +173,9 @@ nav.header-sticky{
 }
 @media(max-width: 600px){
     html{
-        font-size: 12px;
+        font-size: 0.70rem;
     }
-    .home-item h1{
-        font-size: 2.6rem;
-    }
+    
     .home-item h2{
         font-size: 1.6rem;
     }
