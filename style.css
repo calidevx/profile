@@ -6,6 +6,7 @@
     padding: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     scroll-behavior: smooth;
+    background-color: #0a0a0a;
     /* background-color: #0a0a0a; */
 }
 li{
@@ -68,30 +69,22 @@ nav{
 }
 .content{
     /* height: 100vh; */
-    background-color: #0a0a0a;
     color: white;
 }
 /* .content:nth-child(odd){
     background-color: #141414;
 } */
-@media(max-width: 600px){
-    #home,
-    #about,
-    #skills,
-    #contact{
-        padding: 4rem 1rem;
-    }
+
+
+
+#home,
+#about,
+#skills,
+#contact{
+    padding: .5rem 14rem;
 }
 
-@media(min-width: 601px){
-    #home,
-    #about,
-    #skills,
-    #contact{
-        padding: 4rem 14rem;
-    }
-}
-@media(max-width: 1200px){
+@media(max-width: 990px){
     #home,
     #about,
     #skills,
@@ -100,6 +93,14 @@ nav{
     }
 }
 
+@media(max-width: 600px){
+    #home,
+    #about,
+    #skills,
+    #contact{
+        padding: 4rem 1rem;
+    }
+}
 
 /* Sticky Navbar */
 nav.header-sticky{
@@ -191,4 +192,74 @@ nav.header-sticky{
     margin: 1.6rem auto;
     text-align: justify;
     text-justify: inter-word;
+}
+
+/* Skill */
+.skill-item h1{
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+.carousel{
+    margin: 2rem auto;
+    width: 90%;
+    display: flex;
+    overflow-x: auto;
+    height: auto;
+    
+    -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+.carousel::-webkit-scrollbar{
+    display: none;
+}
+.group{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    animation: spin 10s infinite linear;
+    padding-right: 1em;
+}
+.card {
+    position: relative;
+    flex: 0 0 4em;   
+    height: 4em;      
+    border-radius: 0.2em;
+    overflow: hidden;
+    margin: 0.2em;    
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+
+.card::after {
+    content: attr(data-name);   
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 0.3em;           
+    background: rgba(0,0,0,0.6);
+    color: white;
+    text-align: center;
+    font-size: 0.7rem;        
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.card:hover::after {
+    opacity: 1;
+}
+@keyframes spin{
+    from{translate: 0;}
+    to{translate: -100%;}
+}
+.carousel:hover .group{
+    animation-play-state: paused;
 }
